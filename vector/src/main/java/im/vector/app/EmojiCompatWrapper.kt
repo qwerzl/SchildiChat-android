@@ -40,6 +40,7 @@ class EmojiCompatWrapper @Inject constructor(private val context: Context) : Emo
         // Debug options
 //                .setEmojiSpanIndicatorEnabled(true)
 //                .setEmojiSpanIndicatorColor(Color.GREEN)
+        EmojiCompact.init(BundledEmojiCompatConfig(context))
         EmojiCompat.init(config)
                 .registerInitCallback(object : EmojiCompat.InitCallback() {
                     override fun onInitialized() {
